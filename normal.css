@@ -1,0 +1,64 @@
+*, body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 10px;
+    perspective: 10px;
+
+    background-image: url(./layer0.png);
+    background-size: cover;
+}
+header>div {
+    position: relative;
+    height: 80vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+header>div>div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+}
+#layer3 { /* voorgrond */
+    -webkit-transform: translateZ(0) scale(1);
+    transform: translateZ(0) scale(1);
+    z-index: 3;
+
+    background-image: url(layer3.png);
+    background-size: cover;
+}
+/* (perspective — distance) / perspective = scaleFactor */
+
+#layer2 {
+    -webkit-transform: translateZ(-5px) scale(1.5);
+    transform: translateZ(-5px) scale(1.5);
+    z-index: 2;
+
+    background-image: url(layer2.png);
+    background-size: cover;
+}
+
+#layer1 {
+    
+    -webkit-transform: translateZ(-10px) scale(2);
+    transform: translateZ(-10px) scale(2);
+    z-index: 1;
+;
+    background-image: url(layer1.png);
+    background-size: cover;
+}
+main {
+    background: black;
+    height: 200vh;
+}
